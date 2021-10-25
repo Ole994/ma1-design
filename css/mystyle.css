@@ -7,7 +7,6 @@ body{
 }
 
 a {
-    
     text-decoration: none;
     font-size: 12px;
     display: flex;
@@ -42,10 +41,8 @@ ul {
     
     list-style: none;
     display: flex;
-    margin-right: 20px;
-    
+    margin-right: 20px;    
 }
-
 
 li {
     padding: 0 10px;
@@ -61,10 +58,7 @@ li {
 .hero-pic-div{
   justify-content: center;
   align-items: center;
-    margin-top: 30px;
-    
-    
-    
+    margin-top: 30px; 
 }
 
 .some-text-div{   
@@ -78,8 +72,6 @@ li {
 .p-text{
     font-size: 20px;
 }
-
-
 
 .div-heroText-div{
     border-top: 200px;
@@ -95,8 +87,6 @@ footer{
 
 @media only screen and (min-width: 950px) {
 
-
-
     .logo{
         width: 100px;
     }
@@ -111,17 +101,16 @@ footer{
                      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
                      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
+
     .hero-pic-div{
-      justify-content: center;
-       
-        align-items: center;
+    justify-content: center;   
+    align-items: center;
     }
 
     .p-text-flex{
         display: flex;
         align-items: center;
-        justify-content: center;
-        
+        justify-content: center;   
     }
 
     .p-text{
@@ -132,7 +121,6 @@ footer{
     a{
         font-size: 20px;
     }
-
     .autumnDiv{
         display: flex;
         justify-content: space-between;
