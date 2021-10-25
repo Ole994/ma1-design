@@ -1,0 +1,142 @@
+body{
+    background-color: #f0efde;
+    background-image: url("/pic/autumn2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+}
+
+a {
+    
+    text-decoration: none;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+a :hover{
+    color: greenyellow;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+        
+}
+
+nav :hover{
+    color: lightblue;
+}
+
+ .logo {
+    width: 70px;
+    border-radius: 40px;
+    margin-left: 20px;
+} 
+
+ul {
+    
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    
+}
+
+
+li {
+    padding: 0 10px;
+}
+
+.hero-pic{
+    border-radius: 5px;
+    box-shadow: 0px -10px 30px #ccc;
+    width: 100%;
+   
+
+}
+.hero-pic-div{
+  justify-content: center;
+  align-items: center;
+    margin-top: 30px;
+    
+    
+    
+}
+
+.some-text-div{   
+   
+   border: 2px solid rgb(0, 0, 0);
+   background-color: #F7E8C2;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
+
+.p-text{
+    font-size: 20px;
+}
+
+
+
+.div-heroText-div{
+    border-top: 200px;
+    box-shadow: 0px -10px 30px #ccc;
+}
+
+footer{
+    text-align: center;
+    background-color: #ecead0;
+    padding: 10px;
+    
+}
+
+@media only screen and (min-width: 950px) {
+
+
+
+    .logo{
+        width: 100px;
+    }
+    a{
+        font-size: larger;
+    }
+
+    .hero-pic{
+        width: 600px;
+        height: 400px;
+        box-shadow:  rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    .hero-pic-div{
+      justify-content: center;
+       
+        align-items: center;
+    }
+
+    .p-text-flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .p-text{
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    a{
+        font-size: 20px;
+    }
+
+    .autumnDiv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 60px;
+    }
+  }
