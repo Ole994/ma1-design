@@ -1,9 +1,145 @@
-body{
-    background-color: #f0efde;
-    background-image: url("/pic/autumn2.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
+*{
     margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+
+.svg{
+    width: 200px;
+    background-color: rgb(106, 107, 11);
+    border-radius: 50%;
+}
+
+nav{
+    height: 10vh;
+    background: #ebba1b;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+
+}
+
+.nav-links{
+    display: flex;
+    list-style-type: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.landing{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing h1{
+    margin: 100px;
+    font-size: 50px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  
+
+    
+    .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform:translate(-5%, -50%);
+        z-index: 10;
+    }
+
+    
+    .nav-links{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition:all 0.5s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90%);
+        pointer-events: all;
+        background-color: #ebba1b;
+        
+
+    }
+
+.nav-links li{
+    opacity: 0;
+}
+
+.nav-links li a{
+    font-size: 25px;
+}
+
+.nav-links li:nth-child(1){
+    transition: all 0.5s ease 0.2s;
+}
+.nav-links li:nth-child(2){
+    transition: all 0.5s ease 0.4s;
+}
+.nav-links li:nth-child(3){
+    transition: all 0.5s ease 0.6s;
+}
+
+li.fade{
+    opacity: 1;
+}
+
+}
+
+
+.background-img{
+    background-image: url("/pic/background-halloween.jpeg");
+    background-repeat: no-repeat;
+    /* background-position: center;  */
+    
+    background-size: cover;
+    height: 650px;
+}
+
+
+
+
+.h1-index{
+    text-align: center;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 a {
@@ -15,7 +151,6 @@ a {
 }
 
 a :hover{
-    color: greenyellow;
     background-color: white;
 }
 
@@ -23,18 +158,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid black;
+    
         
 }
 
-nav :hover{
-    color: lightblue;
-}
+
 
  .logo {
-    width: 70px;
+     margin: 0;
     border-radius: 40px;
     margin-left: 20px;
+    width: 0px;
 } 
 
 ul {
@@ -46,32 +180,34 @@ ul {
 
 li {
     padding: 0 10px;
+    margin-top: -20px;
 }
 
 .hero-pic{
     border-radius: 5px;
     box-shadow: 0px -10px 30px #ccc;
-    width: 100%;
-   
-
+    width: 250px;
+    height: 250px;
 }
-.hero-pic-div{
-  justify-content: center;
-  align-items: center;
-    margin-top: 30px; 
-}
-
-.some-text-div{   
-   
-   border: 2px solid rgb(0, 0, 0);
-   background-color: #F7E8C2;
-   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   
+.p-text-div-ma1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: large;
+    text-align: center;
+    box-shadow: 0px -10px 30px #ccc;
+    
 }
 
-.p-text{
-    font-size: 20px;
+.div-flex{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+
 }
+
 
 .div-heroText-div{
     border-top: 200px;
@@ -80,37 +216,48 @@ li {
 
 footer{
     text-align: center;
-    background-color: #ecead0;
     padding: 10px;
+    background-color: #ebba1b;
     
 }
 
-@media only screen and (min-width: 950px) {
+.autumnDiv{
+    width: 100%;
+    place-items: center;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   grid-gap: 20px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    
+}
 
-    .logo{
-        width: 100px;
-    }
-    a{
-        font-size: larger;
-    }
+img{
+    width: 100%;
+    object-fit: cover;
+}
 
-    .hero-pic{
-        width: 600px;
+
+
+
+
+ 
+@media only screen and (max-width: 975px) {
+
+    
+    .hero-product-div{
+        background-repeat: no-repeat;
+        
+        background-size: cover;
         height: 400px;
-        box-shadow:  rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-                     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        margin-top: 20px;
     }
-
-    .hero-pic-div{
-    justify-content: center;   
-    align-items: center;
-    }
-
+    
     .p-text-flex{
         display: flex;
         align-items: center;
-        justify-content: center;   
+        justify-content: center;
     }
 
     .p-text{
@@ -118,13 +265,120 @@ footer{
         margin-left: 20px;
     }
 
-    a{
-        font-size: 20px;
+    
+    .background-img{
+        width: 100%;
+        height: 50vh;   
     }
-    .autumnDiv{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 60px;
+
+    .text-div{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .p-text-intro{
+        width: 275px;
+        margin-left: 65px;
+    }
+
+    .smaller{
+        width: 150px;
     }
   }
+
+.logo-img{
+    height: 70px;
+    border-radius: 40%;
+}
+  /* MA2 */
+
+    .logo-div{
+        margin-left: 20px;
+        width: 80px;
+        height: 70px;
+       
+    }
+
+    .hero-img-product{
+       
+        height: 250px;
+    }
+
+.product-img-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    background-position: center; 
+    background-size: cover;
+    grid-gap: 70px;
+     
+  }
+
+  .products-pic{
+    border-radius: 5px;
+    box-shadow: 0px -10px 30px #ccc;
+    width: 250px;
+    height: 200px;
+    margin-top: 20px;
+    
+  }
+
+  .background-div{
+
+    background-color:#ffffff;
+    height: 800px;
+  }
+
+  .h1-product{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+  @media only screen and (min-width: 975px) {
+
+    
+  .product-img-div{
+    
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   grid-gap: 80px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px; 
+    }
+
+     .products-pic{
+         height: 200px;
+     }
+
+     li{
+         width: 100px;
+         margin:0;
+     }
+
+     nav{
+         height: 100px;
+     }
+
+     .hero-img-product{
+         height: 600px;
+     }
+
+     .div-flex{
+        
+        width: 700px;
+    
+    }
+
+
+}
+
+
+
+  
+  
+
+ 
+
+ 
+
+
+
